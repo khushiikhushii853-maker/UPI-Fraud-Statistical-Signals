@@ -1,0 +1,20 @@
+Analysis,Feature,Value
+Highest Correlation,V17,-0.32648106724371595
+Highest Covariance,V3,-0.012149934607801493
+Largest Variance Difference,V7,50.54797645615144
+Largest Skewness Difference,V28,11.98250416534707
+Largest Kurtosis Difference,V28,939.347813495879
+Largest Median Difference,V14,6.781666613321093
+Largest IQR Difference,V17,9.72055097908391
+Largest Mean Difference,V3,7.045451965628404
+Largest Minimum Difference,V5,91.63777518683
+Largest Maximum Difference,V7,114.7869565922121
+Largest Range Difference,V5,115.34435246333902
+Largest Standard Deviation Difference,V17,6.221161092017673
+Largest Z-Score Difference,V17,8.135644860764348
+Top Feature-wise Fraud Signal,V7,60.0
+Top Transaction Outlier Feature,V8,19.91869918699187
+Smallest Statistical Significance P-Value,V14,1.040150709902639e-140
+Normal Amount Mean,Amount,88.29102242231328
+Fraud Amount Mean,Amount,122.21132113821139
+Amount Mean Difference,Amount,33.92029871589811

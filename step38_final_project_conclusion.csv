@@ -1,0 +1,20 @@
+Conclusion Item,Value
+Project Objective,Statistical comparison of normal and fraudulent transactions to identify measurable fraud-signal differences.
+Dataset,Credit Card Fraud Detection Dataset (creditcard.csv)
+Features Analyzed,28
+Statistically Significant Features (p < 0.05),24
+Top Combined Fraud Signal Feature,V7
+Top Combined Fraud Signal Score,60.0
+Highest Absolute Correlation Feature,V17
+Correlation with Class,-0.326481
+Largest Mean Difference Feature,V3
+Largest Median Difference Feature,V14
+Largest Variance Difference Feature,V7
+Largest Kurtosis Difference Feature,V28
+Largest Z-Score Difference Feature,V28
+Top Fraud Outlier Feature,V14
+Top Fraud Outlier Percentage,87.398374
+Normal Transaction Amount Mean,88.291022
+Fraud Transaction Amount Mean,122.211321
+Transaction Amount Mean Difference (Fraud - Normal),33.920299
+Final Conclusion,"The completed statistical analysis identified multiple measurable differences between normal and fraudulent transactions. V7 is the top feature in the combined fraud-signal ranking, while V17 shows the highest absolute correlation with the fraud class and the largest z-score difference. V28 shows the largest skewness and kurtosis differences, V14 shows the largest median difference, V5 shows the largest mean/range-related differences, and V8 has the highest fraud outlier percentage. The findings provide statistical signals for fraud analysis, but they should not be interpreted as proof that any single feature independently causes or determines fraud."
