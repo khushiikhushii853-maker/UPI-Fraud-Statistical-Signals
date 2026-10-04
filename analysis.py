@@ -1870,3 +1870,143 @@ print("STEP 38 COMPLETED SUCCESSFULLY")
 print()
 print("Result File:")
 print("step38_final_project_conclusion.csv")
+# ------------------------------------------------------------
+# STEP 39 - DATA VISUALIZATION
+# ------------------------------------------------------------
+
+import matplotlib.pyplot as plt
+
+print("=" * 60)
+print("STEP 39 - DATA VISUALIZATION")
+print("=" * 60)
+
+# ------------------------------------------------------------
+# GRAPH 1 - CORRELATION WITH CLASS
+# ------------------------------------------------------------
+
+correlation_plot_data = correlation_comparison.head(10).sort_values(
+    "Correlation with Class"
+)
+
+plt.figure(figsize=(10, 6))
+
+plt.barh(
+    correlation_plot_data["Feature"],
+    correlation_plot_data["Correlation with Class"]
+)
+
+plt.xlabel("Correlation with Class")
+plt.ylabel("Feature")
+plt.title("Top 10 Features - Correlation with Fraud Class")
+plt.tight_layout()
+
+plt.savefig(
+    "step39_correlation_with_class.png",
+    dpi=300
+)
+
+plt.close()
+
+print("Created:")
+print("step39_correlation_with_class.png")
+print()
+
+
+# ------------------------------------------------------------
+# GRAPH 2 - NORMAL VS FRAUD MEAN
+# ------------------------------------------------------------
+
+mean_plot_data = mean_comparison.loc[
+    mean_comparison["Absolute Mean Difference"]
+    .sort_values(ascending=False)
+    .head(10)
+    .index
+]
+
+plt.figure(figsize=(10, 6))
+
+x = range(len(mean_plot_data))
+
+plt.bar(
+    [i - 0.2 for i in x],
+    mean_plot_data["Normal Mean"],
+    width=0.4,
+    label="Normal"
+)
+
+plt.bar(
+    [i + 0.2 for i in x],
+    mean_plot_data["Fraud Mean"],
+    width=0.4,
+    label="Fraud"
+)
+
+plt.xticks(
+    list(x),
+    mean_plot_data.index
+)
+
+plt.xlabel("Feature")
+plt.ylabel("Mean Value")
+plt.title("Normal vs Fraud Mean Comparison")
+plt.legend()
+plt.tight_layout()
+
+plt.savefig(
+    "step39_mean_comparison.png",
+    dpi=300
+)
+
+plt.close()
+
+print("Created:")
+print("step39_mean_comparison.png")
+print()
+
+
+# ------------------------------------------------------------
+# GRAPH 3 - FRAUD OUTLIER PERCENTAGE
+# ------------------------------------------------------------
+
+outlier_plot_data = outlier_df.sort_values(
+    "Fraud Outlier Percentage",
+    ascending=False
+).head(10)
+
+plt.figure(figsize=(10, 6))
+
+plt.bar(
+    outlier_plot_data["Feature"],
+    outlier_plot_data["Fraud Outlier Percentage"]
+)
+
+plt.xlabel("Feature")
+plt.ylabel("Fraud Outlier Percentage (%)")
+plt.title("Top 10 Features - Fraud Outlier Percentage")
+plt.xticks(rotation=45)
+plt.tight_layout()
+
+plt.savefig(
+    "step39_fraud_outlier_percentage.png",
+    dpi=300
+)
+
+plt.close()
+
+print("Created:")
+print("step39_fraud_outlier_percentage.png")
+print()
+
+
+# ------------------------------------------------------------
+# STEP 39 COMPLETED
+# ------------------------------------------------------------
+
+print("STEP 39 COMPLETED SUCCESSFULLY")
+print()
+
+print("Visualization Files:")
+print("1. step39_correlation_with_class.png")
+print("2. step39_mean_comparison.png")
+print("3. step39_fraud_outlier_percentage.png")
+print()
